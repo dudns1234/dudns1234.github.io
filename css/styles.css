@@ -11751,7 +11751,7 @@ html {
 
 .navbar {
   padding: 0.7rem 1.5rem;
-  line-height: 2.2rem;
+  line-height: 1rem;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
 }
@@ -11768,7 +11768,7 @@ html {
   position: fixed;
   z-index: 10;
   margin: 0;
-  top: 3.6rem;
+  top: 4rem;
   left: 0;
   bottom: 0;
   box-sizing: border-box;
@@ -11780,3 +11780,16 @@ html {
 .sidebar-links {
   margin-top: 10%;
 }
+
+
+h2.fw-bolder {
+  cursor: pointer;
+  outline: none;
+  /* -webkit-tap-highlight-color : #fff; */
+  -webkit-tap-highlight-color: transparent;
+}
+
+input:focus{
+	outline:none;
+}
+
