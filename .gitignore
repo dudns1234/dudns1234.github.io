@@ -344,7 +344,7 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/python,django,macos,windows,visualstudiocode
 
 #확장자일 경우 (해당 확장자 전체 무시)
-*.jpg
+# *.jpg
 
-#폴더일 경우
-TIL/
+# #폴더일 경우
+# TIL/
