@@ -29,76 +29,149 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <input id="search" onchange='printName()'>  <!-- aria-label="Search" autocomplete="off" spellcheck="false" -->
+                                <ul class="suggestions" id="suggest"></ul>   
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li> -->
                             <li class="nav-item"><a class="nav-link" href="TIL.html">TIL</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <!--sidebar-->
+            <aside class="sidebar">
+                <ul class="sidebar-links">
+                    <h3 class="fw-bolder">Python</h3>
+                        <ul class="list" id="Python" style="display:none">
+                            <li class="md_name">1_python_intro</li>
+                            <li class="md_name">2_제어문</li>
+                            <li class="md_name">3_반복문</li>
+                            <li class="md_name">4_함수</li>
+                            <li class="md_name">5_함수의인수</li>
+                            <li class="md_name">6_lambda_타입힌트_이름공간</li>
+                            <li class="md_name">7_재귀</li>
+                            <li class="md_name">8_method</li>
+                            <li class="md_name">9_map_zip_filter</li>
+                            <li class="md_name">10_module_package</li>
+                            <li class="md_name">11_error</li>
+                            <li class="md_name">12_OOP</li>
+                        </ul>
+                    
+                    <h3 class="fw-bolder">Pandas</h3>
+                        <ul class="list" id="Pandas" style="display:none">
+                            <li class="md_name">1_자료구조</li>
+                            <li class="md_name">2_파일입출력</li>
+                            <li class="md_name">3_조회정렬조건필터</li>
+                            <li class="md_name">4_통계</li>
+                            <li class="md_name">5_결측치</li>
+                            <li class="md_name">6_전처리</li>
+                            <li class="md_name">7_groupby_pivottable</li>
+                            <li class="md_name">8_concat_merge</li>
+                        </ul>
+                    <h3 class="fw-bolder">Git</h3>
+                        <ul class="list" id="Git" style="display:none">
+                            <li class="md_name">text1</li>
+                            <li class="md_name">text2</li>
+                            <li class="md_name">text3</li>
+                            <li class="md_name">text4</li>
+                        </ul>
+                    <h3 class="fw-bolder">Django</h3>
+                        <ul class="list" id="Django" style="display:none">
+                            <li class="md_name">text1</li>
+                            <li class="md_name">text2</li>
+                            <li class="md_name">text3</li>
+                            <li class="md_name">text4</li>
+                        </ul>
+                    <h3 class="fw-bolder">Coding Test</h3>
+                        <ul class="list" id="Coding Test" style ="display:none">
+                            <li class="md_name">text1</li>
+                            <li class="md_name">text2</li>
+                            <li class="md_name">text3</li>
+                            <li class="md_name">text4</li>
+                        </ul>
+                    <h3 class="fw-bolder">ETC</h3>
+                        <ul class="list" id="ETC" style ="display:none">
+                            <li class="md_name">text1</li>
+                            <li class="md_name">text2</li>
+                            <li class="md_name">text3</li>
+                            <li class="md_name">text4</li>
+                        </ul>
+                </ul>
+            </aside>
             <!-- Page Content-->
             <section class="py-5">
                 <div class="container px-5 mb-5">
-                    <div class="text-center mb-5">
+                    <div class="text-center mb-5 child">
                         <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Today Yujin Learn</span></h1>
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 projectcard" style="margin-top: 100px;">
+                                <div class="card-body p-0" id="markdown_box" style="display:none">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
-                                            <h2 class="fw-bolder">Python</h2>
-                                                <!-- <p class = "list">Python</p> -->
-                                                <ul class="python_list" style="display: none;">
-                                                    <div class="markdown-body">
-                                                        <md-block src="./1_python_intro.md">
-                                                            <!-- README.md 로드 실패시 보이는 문구 -->
-                                                            <!-- `README.md` was *not* found -->
-                                                        </md-block>
-                                                    </div>
-                                                    <li><a href="/TIL/1_python_intro.md">text1</a></li>
-                                                    <li><a href="#">text2</a></li>
-                                                    <li><a href="#">text3</a></li>
-                                                    <li><a href="#">text4</a></li>
-                                                </ul>
-                                            <h2 class="fw-bolder">Pandas</h2>
-                                                <ul class="pandas_list" style = "display: none;">
-                                                    <li><a href="#">text1</a></li>
-                                                    <li><a href="#">text2</a></li>
-                                                    <li><a href="#">text3</a></li>
-                                                    <li><a href="#">text4</a></li>
-                                                </ul>
-                                            <h2 class="fw-bolder">Git</h2>
-                                                <ul class="git_list" style="display: none;">
-                                                    <li><a href="#">text1</a></li>
-                                                    <li><a href="#">text2</a></li>
-                                                    <li><a href="#">text3</a></li>
-                                                    <li><a href="#">text4</a></li>
-                                                </ul>
-                                            <h2 class="fw-bolder">Django</h2>
-                                                <ul class="django_list" style="display: none;">
-                                                    <li><a href="#">text1</a></li>
-                                                    <li><a href="#">text2</a></li>
-                                                    <li><a href="#">text3</a></li>
-                                                    <li><a href="#">text4</a></li>
-                                                </ul>
-                                            <h2 class="fw-bolder">Coding Test</h2>
-                                                <ul class="coding_test_list" style ="display: none;">
-                                                    <li><a href="#">text1</a></li>
-                                                    <li><a href="#">text2</a></li>
-                                                    <li><a href="#">text3</a></li>
-                                                    <li><a href="#">text4</a></li>
-                                                </ul>
-                                            <h2 class="fw-bolder">ETC</h2>
-                                                <ul class="etc_list" style ="display: none;">
-                                                    <li><a href="#">text1</a></li>
-                                                    <li><a href="#">text2</a></li>
-                                                    <li><a href="#">text3</a></li>
-                                                    <li><a href="#">text4</a></li>
-                                                </ul>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="1_python_intro" src="./TIL/2_python/1_python_intro.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="2_제어문" src="./TIL/2_python/2_제어문.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="3_반복문" src="./TIL/2_python/3_반복문.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="4_함수" src="./TIL/2_python/4_함수.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="5_함수의인수" src="./TIL/2_python/5_함수의인수.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="6_lambda_타입힌트_이름공간" src="./TIL/2_python/6_lambda_타입힌트_이름공간.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="7_재귀" src="./TIL/2_python/7_재귀.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="8_method" src="./TIL/2_python/8_method.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="9_map_zip_filter" src="./TIL/2_python/9_map_zip_filter.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="10_module_package" src="./TIL/2_python/10_module_package.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="11_error" src="./TIL/2_python/11_error.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="12_OOP" src="./TIL/2_python/12_OOP.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="1_자료구조" src="./TIL/3_pandas/1_자료구조.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="2_파일입출력" src="./TIL/3_pandas/2_파일입출력.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="3_조회정렬조건필터" src="./TIL/3_pandas/3_조회정렬조건필터.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="4_통계" src="./TIL/3_pandas/4_통계.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="5_결측치" src="./TIL/3_pandas/5_결측치.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="6_전처리" src="./TIL/3_pandas/6_전처리.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="7_groupby_pivottable" src="./TIL/3_pandas/7_groupby_pivottable.md" style="display:none"></md-block>
+                                            </div>
+                                            <div class="markdown-body">
+                                                <md-block class="md" id="8_concat_merge" src="./TIL/3_pandas/8_concat_merge.md" style="display:none"></md-block>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -107,46 +180,7 @@
                     </div>
                 </div>
             </section>
-            <!-- <aside class="sidebar">
-                <ul class="sidebar-links">
-                    <li>
-                        <p class = "list">Python</p>
-                        <ul class="python_list" style="display: none;">
-                            <li><a href="#">text1</a></li>
-                            <li><a href="#">text2</a></li>
-                            <li><a href="#">text3</a></li>
-                            <li><a href="#">text4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p class="list">Django</p>
-                        <ul class="django_list" style="display: none;">
-                            <li><a href="#">text1</a></li>
-                            <li><a href="#">text2</a></li>
-                            <li><a href="#">text3</a></li>
-                            <li><a href="#">text4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p class = "list">Git</p>
-                        <ul class="git_list" style="display: none;">
-                            <li><a href="#">text1</a></li>
-                            <li><a href="#">text2</a></li>
-                            <li><a href="#">text3</a></li>
-                            <li><a href="#">text4</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p class = "list">Pandas</p>
-                        <ul class="pandas_list" style = "display: none;">
-                            <li><a href="#">text1</a></li>
-                            <li><a href="#">text2</a></li>
-                            <li><a href="#">text3</a></li>
-                            <li><a href="#">text4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
+            <!-- 
         </main>
         <main class="page" style="display: block;"> 
             <div class="titleContainer px-10 mt-5">
