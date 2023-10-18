@@ -11756,15 +11756,11 @@ html {
   border-bottom: 1px solid #eaecef;
 }
 
-.side-bar a {
-  margin-right: 2%;
-  list-style : none;
-}
 
 .sidebar {
   font-size: 16px;
   background-color: #fff;
-  width: 10rem;
+  width: 15rem;
   position: fixed;
   z-index: 10;
   margin: 0;
@@ -11781,15 +11777,61 @@ html {
   margin-top: 10%;
 }
 
-
-h2.fw-bolder {
+h3.fw-bolder, .sidebar ul {
+  counter-reset : numbering;
+  list-style-type:none;
   cursor: pointer;
   outline: none;
   /* -webkit-tap-highlight-color : #fff; */
   -webkit-tap-highlight-color: transparent;
+  counter-increment : numbering; 
+  content : counter(numbering);
+  margin-right:10px;
+
 }
 
-input:focus{
-	outline:none;
+.child {
+  /* width: 50px; */
+  /* height: 50px; */
+  /* 상하좌우 정중앙 정렬하기 */
+  position: absolute;
+  top: 50%;
+  /* top: 20%; */
+  left: 50%;
+  margin: -25px 0 0 -25px;
 }
 
+.projectcard {
+  margin-top: 100px;
+  left: 20%;
+  /* position: absolute; */
+  margin: -25px 0 0 -25px;
+
+}
+
+.fw-bolder input {
+  cursor: text;
+  right: 1.5rem;
+  width: 10rem;
+  height: 2rem;
+  color: #4e6e8e;
+  display: inline-block;
+  border: 1px solid #cfd4db;
+  border-radius: 2rem;
+  font-size: .9rem;
+  line-height: 2rem;
+  padding: 0 0.5rem 0 2rem;
+  outline: none;
+  transition: all .2s ease;
+  /* background: #fff url(/TIL/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat; */
+  background-size: 1rem;
+}
+
+.suggestions {
+  position: absolute;
+  left: 55%;
+  transform: translate(-50%, 0%);
+  margin-top: 5%;
+
+  /* inline-size: 2px; */
+}
